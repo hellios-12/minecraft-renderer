@@ -34,7 +34,10 @@
   },
   "head": {
     "bones": [
-      {"name": "armor", "pivot": [0, 24, 0]},
+      {
+        "name": "armor", 
+        "pivot": [0, 24, 0]
+      },
       {
         "name": "head",
         "parent": "armor",
@@ -69,7 +72,10 @@
   },
   "chest": {
     "bones": [
-      {"name": "armor", "pivot": [0, 24, 0]},
+      {
+        "name": "armor", 
+        "pivot": [0, 24, 0]
+      },
       {
         "name": "body",
         "parent": "armor",
@@ -118,7 +124,10 @@
   },
   "legs": {
     "bones": [
-      {"name": "armor", "pivot": [0, 24, 0]},
+      {
+        "name": "armor", 
+        "pivot": [0, 12, 0]
+      },
       {
         "name": "body",
         "parent": "armor",
@@ -167,7 +176,10 @@
   },
   "feet": {
     "bones": [
-      {"name": "armor", "pivot": [0, 24, 0]},
+      {
+        "name": "armor", 
+        "pivot": [0, 12, 0]
+      },
       {
         "name": "leftleg",
         "parent": "armor",
