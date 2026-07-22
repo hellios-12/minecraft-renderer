@@ -29,7 +29,7 @@ import { GlobalLegacyBuffer, type LegacySectionGeometry } from './globalLegacyBu
 import { computeShaderSectionRaycastAabb, type ShaderSectionRaycastEntry } from './sectionRaycastAabb'
 import { getMesh } from './entity/EntityMesh'
 import type { WorldRendererThree } from './worldRendererThree'
-import { armorModel } from './entity/armorModels.ts'
+import { armorModel } from './entity/armorModels'
 import { disposeObject } from './threeJsUtils'
 import { getBannerTexture, createBannerMesh, releaseBannerTexture } from './bannerRenderer'
 import { getSignTexture, releaseSignTexture, disposeAllSignTextures } from './signTextureCache'
