@@ -3,27 +3,12 @@
     "bones": [
       {
         "name": "head",
-        "pivot": [
-          0,
-          12,
-          0
-        ],
+        "pivot": [0, 12, 0],
         "cubes": [
           {
-            "origin": [
-              -4,
-              0,
-              -4
-            ],
-            "size": [
-              8,
-              8,
-              8
-            ],
-            "uv": [
-              0,
-              0
-            ],
+            "origin": [-4, 0, -4],
+            "size": [8, 8, 8],
+            "uv": [0, 0],
             "inflate": 1
           }
         ]
@@ -31,75 +16,34 @@
       {
         "name": "overlay",
         "parent": "head",
-        "pivot": [
-          0,
-          12,
-          0
-        ],
+        "pivot": [0, 12, 0],
         "cubes": [
           {
-            "origin": [
-              -4,
-              0,
-              -4
-            ],
-            "size": [
-              8,
-              8,
-              8
-            ],
-            "uv": [
-              32,
-              0
-            ],
+            "origin": [-4, 0, -4],
+            "size": [8, 8, 8],
+            "uv": [32, 0],
             "inflate": 1.2
           }
         ]
       }
     ],
     "visible_bounds_width": 1.5,
-    "visible_bounds_offset": [
-      0,
-      0.5,
-      0
-    ],
+    "visible_bounds_offset": [0, 0.5, 0],
     "texturewidth": 64,
     "textureheight": 32
   },
   "head": {
     "bones": [
-      {
-        "name": "armor",
-        "pivot": [
-          0,
-          12,
-          0
-        ]
-      },
+      {"name": "armor", "pivot": [0, 12, 0]},
       {
         "name": "head",
         "parent": "armor",
-        "pivot": [
-          0,
-          12,
-          0
-        ],
+        "pivot": [0, 12, 0],
         "cubes": [
           {
-            "origin": [
-              -4,
-              23,
-              -4
-            ],
-            "size": [
-              8,
-              8,
-              8
-            ],
-            "uv": [
-              0,
-              0
-            ],
+            "origin": [-4, 23, -4],
+            "size": [8, 8, 8],
+            "uv": [0, 0],
             "inflate": 1
           }
         ]
@@ -107,75 +51,34 @@
       {
         "name": "overlay",
         "parent": "head",
-        "pivot": [
-          0,
-          12,
-          0
-        ],
+        "pivot": [0, 12, 0],
         "cubes": [
           {
-            "origin": [
-              -4,
-              23,
-              -4
-            ],
-            "size": [
-              8,
-              8,
-              8
-            ],
-            "uv": [
-              32,
-              0
-            ],
+            "origin": [-4, 23, -4],
+            "size": [8, 8, 8],
+            "uv": [32, 0],
             "inflate": 1.2
           }
         ]
       }
     ],
     "visible_bounds_width": 1.5,
-    "visible_bounds_offset": [
-      0,
-      0.5,
-      0
-    ],
+    "visible_bounds_offset": [0, 0.5, 0],
     "texturewidth": 64,
     "textureheight": 32
   },
   "chest": {
     "bones": [
-      {
-        "name": "armor",
-        "pivot": [
-          0,
-          12,
-          0
-        ]
-      },
+      {"name": "armor", "pivot": [0, 12, 0]},
       {
         "name": "body",
         "parent": "armor",
-        "pivot": [
-          0,
-          13,
-          0
-        ],
+        "pivot": [0, 13, 0],
         "cubes": [
           {
-            "origin": [
-              -4,
-              12,
-              -2
-            ],
-            "size": [
-              8,
-              12,
-              4
-            ],
-            "uv": [
-              16,
-              16
-            ],
+            "origin": [-4, 12, -2],
+            "size": [8, 12, 4],
+            "uv": [16, 16],
             "inflate": 1
           }
         ]
@@ -183,27 +86,12 @@
       {
         "name": "leftarm",
         "parent": "armor",
-        "pivot": [
-          5,
-          10,
-          0
-        ],
+        "pivot": [5, 10, 0],
         "cubes": [
           {
-            "origin": [
-              4,
-              12,
-              -2
-            ],
-            "size": [
-              4,
-              12,
-              4
-            ],
-            "uv": [
-              40,
-              16
-            ],
+            "origin": [4, 12, -2],
+            "size": [4, 12, 4],
+            "uv": [40, 16],
             "inflate": 0.85
           }
         ]
@@ -211,27 +99,12 @@
       {
         "name": "rightarm",
         "parent": "armor",
-        "pivot": [
-          -5,
-          10,
-          0
-        ],
+        "pivot": [-5, 10, 0],
         "cubes": [
           {
-            "origin": [
-              -8,
-              12,
-              -2
-            ],
-            "size": [
-              4,
-              12,
-              4
-            ],
-            "uv": [
-              40,
-              16
-            ],
+            "origin": [-8, 12, -2],
+            "size": [4, 12, 4],
+            "uv": [40, 16],
             "inflate": 0.85
           }
         ],
@@ -239,48 +112,22 @@
       }
     ],
     "visible_bounds_width": 1.5,
-    "visible_bounds_offset": [
-      0,
-      0.5,
-      0
-    ],
+    "visible_bounds_offset": [0, 0.5, 0],
     "texturewidth": 64,
     "textureheight": 32
   },
   "legs": {
     "bones": [
-      {
-        "name": "armor",
-        "pivot": [
-          0,
-          12,
-          0
-        ]
-      },
+      {"name": "armor", "pivot": [0, 12, 0]},
       {
         "name": "body",
         "parent": "armor",
-        "pivot": [
-          0,
-          13,
-          0
-        ],
+        "pivot": [0, 13, 0],
         "cubes": [
           {
-            "origin": [
-              -4,
-              12,
-              -2
-            ],
-            "size": [
-              8,
-              12,
-              4
-            ],
-            "uv": [
-              16,
-              16
-            ],
+            "origin": [-4, 12, -2],
+            "size": [8, 12, 4],
+            "uv": [16, 16],
             "inflate": 0.5
           }
         ]
@@ -288,27 +135,12 @@
       {
         "name": "leftleg",
         "parent": "armor",
-        "pivot": [
-          1.9,
-          1,
-          0
-        ],
+        "pivot": [1.9, 1, 0],
         "cubes": [
           {
-            "origin": [
-              -0.1,
-              0,
-              -2
-            ],
-            "size": [
-              4,
-              12,
-              4
-            ],
-            "uv": [
-              0,
-              16
-            ],
+            "origin": [-0.1, 0, -2],
+            "size": [4, 12, 4],
+            "uv": [0, 16],
             "inflate": 0.5
           }
         ]
@@ -316,27 +148,12 @@
       {
         "name": "rightleg",
         "parent": "armor",
-        "pivot": [
-          -1.9,
-          1,
-          0
-        ],
+        "pivot": [-1.9, 1, 0],
         "cubes": [
           {
-            "origin": [
-              -3.9,
-              0,
-              -2.01
-            ],
-            "size": [
-              4,
-              12,
-              4
-            ],
-            "uv": [
-              0,
-              16
-            ],
+            "origin": [-3.9, 0, -2.01],
+            "size": [4, 12, 4],
+            "uv": [0, 16],
             "inflate": 0.5
           }
         ],
@@ -344,48 +161,22 @@
       }
     ],
     "visible_bounds_width": 1.5,
-    "visible_bounds_offset": [
-      0,
-      0.5,
-      0
-    ],
+    "visible_bounds_offset": [0, 0.5, 0],
     "texturewidth": 64,
     "textureheight": 32
   },
   "feet": {
     "bones": [
-      {
-        "name": "armor",
-        "pivot": [
-          0,
-          12,
-          0
-        ]
-      },
+      {"name": "armor", "pivot": [0, 12, 0]},
       {
         "name": "leftleg",
         "parent": "armor",
-        "pivot": [
-          1.9,
-          1,
-          0
-        ],
+        "pivot": [1.9, 1, 0],
         "cubes": [
           {
-            "origin": [
-              -0.1,
-              0,
-              -2
-            ],
-            "size": [
-              4,
-              12,
-              4
-            ],
-            "uv": [
-              0,
-              16
-            ],
+            "origin": [-0.1, 0, -2],
+            "size": [4, 12, 4],
+            "uv": [0, 16],
             "inflate": 0.8
           }
         ]
@@ -393,27 +184,12 @@
       {
         "name": "rightleg",
         "parent": "armor",
-        "pivot": [
-          -1.9,
-          1,
-          0
-        ],
+        "pivot": [-1.9, 1, 0],
         "cubes": [
           {
-            "origin": [
-              -3.9,
-              0.01,
-              -2.01
-            ],
-            "size": [
-              4,
-              12,
-              4
-            ],
-            "uv": [
-              0,
-              16
-            ],
+            "origin": [-3.9, 0.01, -2.01],
+            "size": [4, 12, 4],
+            "uv": [0, 16],
             "inflate": 0.8
           }
         ],
@@ -421,56 +197,8 @@
       }
     ],
     "visible_bounds_width": 1.5,
-    "visible_bounds_offset": [
-      0,
-      0.5,
-      0
-    ],
+    "visible_bounds_offset": [0, 0.5, 0],
     "texturewidth": 64,
     "textureheight": 32
-  },
-  "armorModel": {
-    "skull": {
-      "bones": []
-    },
-    "head": {
-      "bones": []
-    },
-    "chest": {
-      "bones": []
-    },
-    "legs": {
-      "bones": []
-    },
-    "feet": {
-      "bones": []
-    }
-  },
-  "armorTextures": {
-    "leather": {
-      "layer_1": "textures/models/armor/leather_layer_1.png",
-      "layer_2": "textures/models/armor/leather_layer_2.png"
-    },
-    "chainmail": {
-      "layer_1": "textures/models/armor/chainmail_layer_1.png",
-      "layer_2": "textures/models/armor/chainmail_layer_2.png"
-    },
-    "iron": {
-      "layer_1": "textures/models/armor/iron_layer_1.png",
-      "layer_2": "textures/models/armor/iron_layer_2.png"
-    },
-    "gold": {
-      "layer_1": "textures/models/armor/gold_layer_1.png",
-      "layer_2": "textures/models/armor/gold_layer_2.png"
-    },
-    "diamond": {
-      "layer_1": "textures/models/armor/diamond_layer_1.png",
-      "layer_2": "textures/models/armor/diamond_layer_2.png"
-    },
-    "netherite": {
-      "layer_1": "textures/models/armor/netherite_layer_1.png",
-      "layer_2": "textures/models/armor/netherite_layer_2.png"
-    }
-  },
-  "elytraTexture": "textures/entity/elytra.png"
+  }
 }
