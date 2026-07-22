@@ -66,7 +66,7 @@ export function createPlayerObject(options: { username?: string; uuid?: string; 
   // Set up animation
   playerObject.animation = new WalkingGeneralSwing()
   ;(playerObject.animation as WalkingGeneralSwing).isMoving = false
-  playerObject.animation.update(playerObject, 0)
+  playerObject.animation?.update(playerObject, 0);
 
   return { playerObject, wrapper }
 }
