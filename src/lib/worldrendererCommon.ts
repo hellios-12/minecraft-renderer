@@ -32,9 +32,7 @@ import { PlayerStateReactive } from '../playerState/playerState'
 import { IndexedData } from 'minecraft-data'
 import { WorldRendererConfig } from '../graphicsBackend/config'
 import { CameraCollisionBlockCache } from '../three/cameraCollisionBlockCache'
-declare global {
-  interface WorkerGlobalScope {}
-}
+
 function mod(x, n) {
   return ((x % n) + n) % n
 }
