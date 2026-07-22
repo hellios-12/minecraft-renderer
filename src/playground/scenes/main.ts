@@ -49,7 +49,7 @@ class MainScene extends BasePlaygroundScene {
     super.initGui()
   }
 
-  blockProps = {}
+  blockProps: Record<string, any> = {}
   metadataFolder: GUI | undefined
   metadataGui: Controller | undefined
 
