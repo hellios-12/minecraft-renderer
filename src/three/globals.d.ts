@@ -1,15 +1,15 @@
 import type { AppViewer } from './graphicsBackend/appViewer'
 import type { IndexedData } from 'minecraft-data'
 
-interface ObjectConstructor {
-  keys<T extends object>(obj: T): Array<StringKeys<T>>
-  entries<T extends object>(obj: T): Array<[StringKeys<T>, T[keyof T]]>
-  // todo review https://stackoverflow.com/questions/57390305/trying-to-get-fromentries-type-right
-  fromEntries<T extends Array<[string, any]>>(obj: T): Record<T[number][0], T[number][1]>
-  assign<T extends Record<string, any>, K extends Record<string, any>>(target: T, source: K): asserts target is T & K
-}
-
 declare global {
+  interface ObjectConstructor {
+    keys<T extends object>(obj: T): Array<StringKeys<T>>
+    entries<T extends object>(obj: T): Array<[StringKeys<T>, T[keyof T]]>
+    // todo review https://stackoverflow.com/questions/57390305/trying-to-get-fromentries-type-right
+    fromEntries<T extends Array<[string, any]>>(obj: T): Record<T[number][0], T[number][1]>
+    assign<T extends Record<string, any>, K extends Record<string, any>>(target: T, source: K): asserts target is T & K
+  }
+
   // eslint-disable-next-line no-var
   var appViewer: AppViewer
   // eslint-disable-next-line no-var
