@@ -23,7 +23,7 @@ const buildOptions = {
   platform: 'browser',
   target: ['es2020'],
   entryPoints: [path.join(rootDir, './src/index.ts')],
-  outfile: path.join(rootDir, './dist/minecraft-renderer.js'),
+  outfile: path.join(rootDir, './dist/index.js'),
   minify: minify,
   minifyIdentifiers: false,
   logLevel: 'info',
@@ -81,7 +81,7 @@ if (watch) {
   console.log('🔨 Building library...')
   const result = await build(buildOptions)
   if (result.metafile) {
-    const metaPath = path.join(rootDir, './dist/minecraft-renderer.js.meta.json')
+    const metaPath = path.join(rootDir, './dist/index.js.meta.json')
     fs.writeFileSync(metaPath, JSON.stringify(result.metafile))
     console.log('  metafile:', metaPath)
   }
