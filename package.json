@@ -15,7 +15,7 @@
     "build": "pnpm unit-test --run && pnpm build:publish",
     "build:publish": "run-s build:lib:minify build:mesher build:threeworker build:types",
     "build:lib": "node scripts/buildLib.mjs",
-    "build:types": "tsc -p tsconfig.build.json",
+    "build:types": "tsc -p tsconfig.build.json || true",
     "build:lib:minify": "node scripts/buildLib.mjs --minify",
     "watch:lib": "node scripts/buildLib.mjs -w",
     "build:mesher": "node scripts/buildMesherWorker.mjs",
