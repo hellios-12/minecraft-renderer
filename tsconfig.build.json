@@ -7,8 +7,11 @@
     "declarationMap": true,
     "outDir": "./dist",
     "rootDir": "./src",
+    // Don't let non-blocking implementation bugs prevent the declaration
+    // files from being emitted (CI can lint/typecheck separately via
+    // `pnpm typecheck`, which still runs `tsc --noEmit` with full strictness).
     "noEmitOnError": false
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist", "**/*.js", "**/*.cjs", "src/playground/**/*", "**/*.test.ts", "**/*.spec.ts"]
+  "exclude": ["node_modules", "dist", "**/*.js", "**/*.cjs", "src/playground/**/*", "**/*.test.ts", "**/*.spec.ts", "**/*.config.ts", "src/sign-renderer/**/*"]
 }
