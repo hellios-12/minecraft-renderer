@@ -7,7 +7,7 @@ interface LongPressOptions {
 
 const useLongPress = (onLongPress: () => void, onClick: () => void, { shouldPreventDefault = false, delay = 300 }: LongPressOptions = {}) => {
   const [longPressTriggered, setLongPressTriggered] = useState(false)
-  const timeout = useRef<number | undefined>(null)
+  const timeout = useRef<number | undefined>(undefined)
   const target = useRef<EventTarget | null>(null)
 
   const start = useCallback(
