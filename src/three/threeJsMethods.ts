@@ -1,6 +1,3 @@
-declare global {
-  var appViewer: any
-}
 import { AppViewer } from '../graphicsBackend'
 import { ThreeJsBackendMethods } from './graphicsBackendBase'
 
