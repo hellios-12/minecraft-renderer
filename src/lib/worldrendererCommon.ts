@@ -443,7 +443,7 @@ export abstract class WorldRendererCommon<WorkerSend = any, WorkerReceive = any>
         return
       }
 
-      const workerScope = globalThis as typeof globalThis & { WorkerGlobalScope?: typeof WorkerGlobalScope }
+      const workerScope = globalThis as typeof globalThis & { WorkerGlobalScope?: new (...args: any[]) => object }
       if (typeof workerScope.WorkerGlobalScope !== 'undefined' && globalThis instanceof workerScope.WorkerGlobalScope) {
         // eslint-disable-next-line no-restricted-globals
         self.postMessage({ type: 'reloadLoadedChunks' })
