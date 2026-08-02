@@ -1,0 +1,1 @@
+{"version":3,"file":"holdingBlockItemIdentity.d.ts","sourceRoot":"","sources":["../../src/three/holdingBlockItemIdentity.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,aAAa,EAAE,6BAA6B,EAAE,MAAM,sBAAsB,CAAA;AACxF,OAAO,KAAK,EAAE,kBAAkB,EAAE,MAAM,sBAAsB,CAAA;AAE9D,eAAO,MAAM,+BAA+B,GAAI,eAAe,kBAAkB,KAAG,6BAIlF,CAAA;AAMF,eAAO,MAAM,oBAAoB,GAAI,eAAe,kBAAkB,EAAE,WAAW,aAAa,WAkB/F,CAAA"}

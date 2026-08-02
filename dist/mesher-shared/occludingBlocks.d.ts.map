@@ -1,0 +1,1 @@
+{"version":3,"file":"occludingBlocks.d.ts","sourceRoot":"","sources":["../../src/mesher-shared/occludingBlocks.ts"],"names":[],"mappings":"AAIA,MAAM,MAAM,kBAAkB,GAAG;IAC/B,eAAe,EAAE,WAAW,CAAA;IAC5B,eAAe,EAAE,UAAU,CAAA;CAC5B,CAAA;AAUD,8FAA8F;AAC9F,eAAO,MAAM,qBAAqB,GAAI,SAAS,MAAM,KAAG,kBAiCvD,CAAA"}

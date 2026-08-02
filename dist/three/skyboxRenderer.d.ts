@@ -1,0 +1,44 @@
+import * as THREE from 'three';
+import { DebugGui } from '../lib/DebugGui';
+export declare const DEFAULT_TEMPERATURE = 0.75;
+export declare class SkyboxRenderer {
+    private readonly scene;
+    defaultSkybox: boolean;
+    initialImage: string | null;
+    private texture;
+    private mesh;
+    private skyMesh;
+    private voidMesh;
+    private worldTime;
+    private partialTicks;
+    private viewDistance;
+    private temperature;
+    private inWater;
+    private waterBreathing;
+    private fogBrightness;
+    private prevFogBrightness;
+    private readonly fogOrangeness;
+    private readonly distanceFactor;
+    private readonly brightnessAtPosition;
+    debugGui: DebugGui;
+    constructor(scene: THREE.Scene, defaultSkybox: boolean, initialImage: string | null);
+    init(): Promise<void>;
+    setSkyboxImage(imageUrl: string): Promise<void>;
+    update(cameraPosition: THREE.Vector3, newViewDistance: number): void;
+    updateTime(timeOfDay: number, partialTicks?: number): void;
+    updateViewDistance(viewDistance: number): void;
+    updateTemperature(temperature: number): void;
+    updateWaterState(inWater: boolean, waterBreathing: boolean): void;
+    updateDefaultSkybox(defaultSkybox: boolean): void;
+    private createGradientSky;
+    private getFogColor;
+    private getSkyColor;
+    private calculateCelestialAngle;
+    private getCelestialAngle;
+    private getTemperature;
+    private getSkyColorByTemp;
+    private hsbToRgb;
+    private updateSkyColors;
+    dispose(): void;
+}
+//# sourceMappingURL=skyboxRenderer.d.ts.map

@@ -1,0 +1,1 @@
+{"version":3,"file":"workerMessageSanitize.d.ts","sourceRoot":"","sources":["../../src/lib/workerMessageSanitize.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH,wBAAgB,4BAA4B,CAAC,KAAK,EAAE,OAAO,EAAE,KAAK,SAAI,GAAG,OAAO,CAgC/E;AAED,wBAAgB,uBAAuB,CAAC,IAAI,EAAE,OAAO,EAAE,GAAG,OAAO,EAAE,CAElE"}

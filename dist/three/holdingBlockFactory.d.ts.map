@@ -1,0 +1,1 @@
+{"version":3,"file":"holdingBlockFactory.d.ts","sourceRoot":"","sources":["../../src/three/holdingBlockFactory.ts"],"names":[],"mappings":"AAEA,OAAO,KAAK,EAAE,aAAa,EAAE,MAAM,qBAAqB,CAAA;AACxD,OAAO,KAAK,EAAE,kBAAkB,EAAE,MAAM,sBAAsB,CAAA;AAE9D,wBAAgB,kBAAkB,CAAC,aAAa,EAAE,kBAAkB,EAAE,OAAO,GAAE,OAAe,GAAG,aAAa,CAM7G"}

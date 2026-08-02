@@ -1,0 +1,1 @@
+{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../src/performanceMonitor/index.ts"],"names":[],"mappings":"AAAA,YAAY,EAAE,sBAAsB,EAAE,6BAA6B,EAAE,MAAM,SAAS,CAAA;AACpF,OAAO,EAAE,oCAAoC,EAAE,MAAM,SAAS,CAAA;AAC9D,OAAO,EAAE,mBAAmB,EAAE,iBAAiB,EAAE,kBAAkB,EAAE,MAAM,aAAa,CAAA;AACxF,OAAO,EAAE,kBAAkB,EAAE,MAAM,sBAAsB,CAAA;AACzD,OAAO,EAAE,6BAA6B,EAAE,MAAM,iCAAiC,CAAA"}

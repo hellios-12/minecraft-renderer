@@ -1,0 +1,112 @@
+import * as THREE from 'three';
+import { WorldBlockProvider } from 'mc-assets/dist/worldBlockProvider';
+import { BlockModel } from 'mc-assets';
+import { SmoothSwitcher } from '../lib/smoothSwitcher';
+import { WorldRendererThree } from './worldRendererThree';
+import type { IHoldingBlock } from './holdingBlockTypes';
+import { HandItemBlock, MovementState } from '../playerState/types';
+import { PlayerStateRenderer } from '../playerState/playerState';
+import { IndexedData } from 'minecraft-data';
+import { WorldRendererConfig } from '../graphicsBackend';
+export default class HoldingBlock implements IHoldingBlock {
+    worldRenderer: WorldRendererThree;
+    offHand: boolean;
+    holdingBlock: THREE.Object3D | undefined;
+    blockSwapAnimation: {
+        switcher: SmoothSwitcher;
+    } | undefined;
+    cameraGroup: THREE.Mesh<THREE.BufferGeometry<THREE.NormalBufferAttributes, THREE.BufferGeometryEventMap>, THREE.Material<THREE.MaterialEventMap> | THREE.Material<THREE.MaterialEventMap>[], THREE.Object3DEventMap>;
+    armTransformGroup: THREE.Group<THREE.Object3DEventMap>;
+    camera: THREE.PerspectiveCamera;
+    equipProgress: number;
+    stopUpdate: boolean;
+    lastHeldItem: HandItemBlock | undefined;
+    lastHeldItemRenderKey: string | undefined;
+    currentDisplayType: 'hand' | 'item' | 'block';
+    isSwinging: boolean;
+    nextIterStopCallbacks: Array<() => void> | undefined;
+    idleAnimator: HandIdleAnimator | undefined;
+    ready: boolean;
+    lastUpdate: number;
+    xBob: number;
+    yBob: number;
+    lastBobUpdateTime: number;
+    private lastBobWalkDist;
+    private lastBobTickTime;
+    playerHand: THREE.Object3D | undefined;
+    offHandDisplay: boolean;
+    offHandModeLegacy: boolean;
+    swingAnimator: HandSwingAnimator | undefined;
+    config: WorldRendererConfig;
+    private disposed;
+    private unsubs;
+    constructor(worldRenderer: WorldRendererThree, offHand?: boolean);
+    dispose(): void;
+    updateItem(): void;
+    initCameraGroup(): void;
+    startSwing(): void;
+    stopSwing(): void;
+    render(originalCamera: THREE.PerspectiveCamera, renderer: THREE.WebGLRenderer, ambientLight: THREE.AmbientLight, directionalLight: THREE.DirectionalLight): void;
+    playBlockSwapAnimation(forceState: 'appeared' | 'disappeared'): Promise<boolean>;
+    isDifferentItem(block: HandItemBlock | undefined): boolean;
+    updateCameraGroup(): void;
+    lastItemModelName: string | undefined;
+    private createItemModel;
+    replaceItemModel(handItem?: HandItemBlock): Promise<void>;
+    testUnknownBlockSwitch(): void;
+    switchRequest: number;
+    setNewItem(handItem?: HandItemBlock): Promise<void>;
+}
+declare class HandIdleAnimator {
+    handMesh: THREE.Object3D;
+    playerState: PlayerStateRenderer;
+    globalTime: number;
+    lastTime: number;
+    currentState: MovementState;
+    targetState: MovementState;
+    defaultPosition: {
+        x: number;
+        y: number;
+        z: number;
+        rotationX: number;
+        rotationY: number;
+        rotationZ: number;
+    };
+    private readonly idleOffset;
+    private readonly tween;
+    private idleTween;
+    private readonly stateSwitcher;
+    private readonly debugParams;
+    private readonly debugGui;
+    constructor(handMesh: THREE.Object3D, playerState: PlayerStateRenderer);
+    private startIdleAnimation;
+    private stopIdleAnimation;
+    private getStateTransform;
+    setState(newState: MovementState): void;
+    updated: boolean;
+    update(): void;
+    getCurrentState(): MovementState;
+    destroy(): void;
+}
+declare class HandSwingAnimator {
+    private animationTimer;
+    private lastTime;
+    private isAnimating;
+    private stopRequested;
+    private swingProgress;
+    type: 'hand' | 'block' | 'item';
+    readonly debugParams: {
+        animationTime: number;
+        animationStage: number;
+    };
+    private readonly debugGui;
+    constructor();
+    update(): void;
+    getSwingProgress(): number;
+    startSwing(): void;
+    stopSwing(): void;
+    isCurrentlySwinging(): boolean;
+}
+export declare const getBlockMeshFromModel: (material: THREE.Material, model: BlockModel, name: string, blockProvider: WorldBlockProvider, mcData: IndexedData) => THREE.Group<THREE.Object3DEventMap>;
+export {};
+//# sourceMappingURL=holdingBlock.d.ts.map

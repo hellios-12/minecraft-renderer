@@ -1,0 +1,2 @@
+export declare function watchProperty<T extends Record<string, any>, K>(asyncGetter: (value: T[keyof T]) => Promise<K>, valtioProxy: T, key: keyof T, readySetter: (res: K) => void, cleanup?: (res: K) => void): () => void;
+//# sourceMappingURL=proxy.d.ts.map
