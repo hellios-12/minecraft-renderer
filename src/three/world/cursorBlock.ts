@@ -134,6 +134,48 @@ export class CursorBlock {
     }
   }
 
+  /**
+   * Check if a block should be visible (not occluded by terrain between it and camera)
+   */
+  /**
+   * Check if a block should be visible (not occluded by terrain between it and camera)
+   */
+  private isBlockOccluded(blockPos: Vec3, shape: BlockShape): boolean {
+    const cameraPos = this.worldRenderer.getCameraPosition() // Kiểu Vector3 (Three.js)
+
+    // SỬA: Khởi tạo blockCenterPos bằng THREE.Vector3 thay vì Vec3 của Minecraft
+    const blockCenterPos = new THREE.Vector3(
+      blockPos.x + shape.position.x + shape.width / 2,
+      blockPos.y + shape.position.y + shape.height / 2,
+      blockPos.z + shape.position.z + shape.depth / 2
+    )
+
+    // SỬA: Thực hiện phép trừ vector chuẩn bằng API của Three.js (.sub)
+    const direction = blockCenterPos.clone().sub(cameraPos)
+
+    // SỬA: Hàm .length() giờ đây hoạt động hoàn hảo vì 'direction' đã là THREE.Vector3
+    const distance = direction.length()
+
+    // Use raycaster to check if there's an occluding block between camera and target
+    const raycaster = new THREE.Raycaster()
+    const rayDirection = direction.clone().normalize() // Tối ưu: chuẩn hóa trực tiếp từ direction có sẵn
+    raycaster.ray.origin.set(cameraPos.x, cameraPos.y, cameraPos.z)
+    raycaster.ray.direction.copy(rayDirection)
+
+    // Check intersections with terrain chunks
+    const intersects = raycaster.intersectObjects(this.worldRenderer.scene.children, true)
+
+    // If there's an intersection closer than our target block, it's occluded
+    if (intersects.length > 0) {
+      const firstIntersection = intersects[0]
+      if (firstIntersection.distance < distance - 0.1) {
+        return true
+      }
+    }
+
+    return false
+  }
+
   setHighlightCursorBlock(blockPos: Vec3 | null, shapePositions?: BlocksShapes, force = false): void {
     if (
       blockPos &&
@@ -154,6 +196,11 @@ export class CursorBlock {
 
     const group = new THREE.Group()
     for (const { position: _position, width, height, depth } of shapePositions ?? []) {
+      // FIX: Skip rendering shapes that are occluded by terrain
+      if (this.isBlockOccluded(blockPos, { position: _position, width, height, depth })) {
+        continue
+      }
+
       const position = new Vec3(_position.x, _position.y, _position.z)
       const scale = [1.0001 * width, 1.0001 * height, 1.0001 * depth] as const
       const geometry = new THREE.BoxGeometry(...scale)
